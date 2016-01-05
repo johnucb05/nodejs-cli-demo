@@ -18,4 +18,4 @@ Completed:
 
 Walkthrough Gif:
 
-![Video Walkthrough](http://i.imgur.com/PSrDpOY.gif)
+![Video Walkthrough](walkthrough.gif)
