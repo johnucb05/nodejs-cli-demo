@@ -6,6 +6,11 @@ var myCallback = function (err, data) {
 
 };
 //var fd = fs.open(process.argv[2],'r+', myCallback);
-var fd = fs.openSync(process.argv[2],'r');
-fs.futimes(fd, new Date(), new Date(),myCallback);
+var fd = fs.open(process.argv[2],'r', function(err, fd) {
+	if(err) throw err;
+	else {
+		fs.futimes(fd, new Date(), new Date(),myCallback);
+	}
+});
+//fs.futimes(fd, new Date(), new Date(),myCallback);
 //fs.closeSync(fd);
